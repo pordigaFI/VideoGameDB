@@ -29,7 +29,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateUI(){
+
         lifecycleScope.launch {
+
             games = repository.getAllGames()
 
             if(games.isNotEmpty()){
