@@ -11,9 +11,9 @@ data class GameEntity(
     @ColumnInfo(name = "game_id")
     val id: Long = 0,    //llave primaria
     @ColumnInfo(name= "game_title")
-    val title: String,
+    var title: String,
     @ColumnInfo(name= "game_genre")
-    val genre: String,
+    var genre: String,
     @ColumnInfo(name= "game_developer")
-    val developer: String
+    var developer: String
 )

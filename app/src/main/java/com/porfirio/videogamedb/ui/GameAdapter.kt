@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.porfirio.videogamedb.data.db.model.GameEntity
 import com.porfirio.videogamedb.databinding.GameElementBinding
 
-class GameAdapter(): RecyclerView.Adapter<GameAdapter.ViewHolder>() {
+class GameAdapter(private val onGameClick: (GameEntity)-> Unit): RecyclerView.Adapter<GameAdapter.ViewHolder>() {
 
     private  var games: List<GameEntity> = emptyList()
 
@@ -40,7 +40,7 @@ class GameAdapter(): RecyclerView.Adapter<GameAdapter.ViewHolder>() {
 
         holder.itemView.setOnClickListener{
             //Aqui va el click del elemento
-
+            onGameClick(games[position])
         }
 
         holder.ivIcon.setOnClickListener{
@@ -51,6 +51,5 @@ class GameAdapter(): RecyclerView.Adapter<GameAdapter.ViewHolder>() {
     fun updateList(list: List<GameEntity>){
         games = list
         notifyDataSetChanged()
-        
     }
 }

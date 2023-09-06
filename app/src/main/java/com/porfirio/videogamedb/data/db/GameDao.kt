@@ -14,10 +14,10 @@ interface GameDao {
 
     //Create
     @Insert
-    suspend fun insertGame(game: GameEntity)  //suspend se usa cuando se va a utilizar co-rutinas
+    suspend fun insertGame(game: GameEntity)  //suspend se usa cuando se van a utilizar co-rutinas
     //y se deja al sistema la posibilidad de suspender una función si así se requiere.
 
-    //Cuando queremos instertar varios juegos se usa la siguiente instrucción
+    //Cuando queremos insertar varios juegos se usa la siguiente instrucción
     @Insert
     suspend fun insertGames(games: List<GameEntity>)
 

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">VideoGameDB</string>
+    <string name="header">Header del ImageView de game_dialog.xml</string>
+    <string name="titulo">Título del Text input Layout (game_dialog.xml)</string>
+    <string name="genero">Género</string>
+    <string name="desarrollador">Nombre del Desarrollador</string>
+    <string name="SinRegistros">¡No hay registros!</string>
+    <string name="addElement">Agregrar elemento</string>
+    <string name="imagen">Imagen de game pad</string>
 </resources>
